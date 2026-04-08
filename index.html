@@ -156,97 +156,194 @@
 <section class="routes page" id="routes" data-exit="fold">
   <div class="container">
     <div class="routes__header">
-      <h2 class="heading-lg reveal">一种凝胶，三条路线</h2>
-      <p class="subtitle reveal reveal-delay-1">盐环境决定终点矿物</p>
+      <h2 class="heading-lg reveal">Ca<sup>2+</sup> 驱动矿化</h2>
+      <p class="subtitle reveal reveal-delay-1">不同钙离子浓度 &middot; 处理 20 分钟 &middot; 封闭效果对比</p>
     </div>
 
-    <div class="routes__diagram">
-      <svg viewBox="0 0 960 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Central node -->
-        <circle class="routes__center" cx="100" cy="210" r="36" fill="#6BA3BE" opacity="0.15" stroke="#6BA3BE" stroke-width="2"/>
-        <g class="routes__center-text">
-          <text x="100" y="203" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="11" fill="#6BA3BE">Mg-ACCP</text>
-          <text x="100" y="220" text-anchor="middle" font-family="Noto Sans SC, sans-serif" font-size="9" fill="#8899AA">凝胶前驱体</text>
-        </g>
+    <div class="routes__body">
+      <!-- Left: Mineralization route diagram -->
+      <div class="routes__diagram">
+        <svg viewBox="0 0 560 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Central node: Mg-ACCP gel -->
+          <rect class="routes__center" x="15" y="130" width="130" height="100" rx="22" fill="rgba(107,163,190,0.10)" stroke="#6BA3BE" stroke-width="2"/>
+          <g class="routes__center-text">
+            <text x="80" y="172" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="15" fill="#6BA3BE">Mg-ACCP</text>
+            <text x="80" y="196" text-anchor="middle" font-family="Noto Sans SC, sans-serif" font-size="12" fill="#8899AA">凝胶前驱体</text>
+          </g>
 
-        <!-- ====== Route 1: Ca (top) ====== -->
-        <path class="draw-path route-1" d="M136 210 C180 210 200 80 260 80 L550 80" stroke="#6BA3BE" stroke-width="2" fill="none"/>
-        <g class="routes__labels lbl-1">
-          <rect x="170" y="48" width="80" height="24" rx="12" fill="#6BA3BE" opacity="0.12"/>
-          <text x="210" y="64" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="12" fill="#6BA3BE">+ Ca&#178;&#8314;</text>
-          <text x="210" y="42" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">CaCl&#8322; 0.4 – 6.7 M</text>
-        </g>
-        <!-- Fork -->
-        <path class="draw-path route-1" d="M550 80 L620 50" stroke="#6BA3BE" stroke-width="1.5" fill="none"/>
-        <path class="draw-path route-1" d="M550 80 L620 110" stroke="#6BA3BE" stroke-width="1.5" fill="none"/>
-        <!-- Top fork: HAP -->
-        <circle class="routes__endpoint ep-1" cx="640" cy="45" r="8" fill="#6BA3BE"/>
-        <image href="HAP.svg" x="610" y="5" width="36" height="36" opacity="0.85"/>
-        <g class="routes__labels lbl-1">
-          <text x="658" y="42" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="13" fill="#1B2A4A">HAP</text>
-          <text x="658" y="58" font-family="Noto Sans SC, sans-serif" font-size="10" fill="#8899AA">羟基磷灰石</text>
-          <text x="740" y="42" font-family="Space Grotesk, sans-serif" font-size="9" fill="#A8D4E6">60 &#8451; 干燥</text>
-        </g>
-        <!-- Bottom fork: CPP -->
-        <circle class="routes__endpoint ep-2" cx="640" cy="110" r="8" fill="#6BA3BE" opacity="0.6"/>
-        <image href="cpp.svg" x="610" y="72" width="36" height="36" opacity="0.85"/>
-        <g class="routes__labels lbl-1">
-          <text x="658" y="107" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="13" fill="#1B2A4A">CPP</text>
-          <text x="658" y="123" font-family="Noto Sans SC, sans-serif" font-size="10" fill="#8899AA">焦磷酸钙</text>
-          <text x="720" y="107" font-family="Space Grotesk, sans-serif" font-size="9" fill="#A8D4E6">冻干</text>
-        </g>
+          <!-- Horizontal trunk line -->
+          <path class="draw-path route-1" d="M145 180 L290 180" stroke="#6BA3BE" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- Ca²⁺ badge -->
+          <g class="routes__labels lbl-1">
+            <rect x="185" y="156" width="72" height="26" rx="13" fill="#6BA3BE" opacity="0.15"/>
+            <text x="221" y="174" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="14" fill="#6BA3BE">+ Ca&#178;&#8314;</text>
+          </g>
+          <!-- Direction arrow -->
+          <g class="routes__labels lbl-1">
+            <polygon points="278,175 290,180 278,185" fill="#6BA3BE" opacity="0.6"/>
+          </g>
 
-        <!-- XRD Ca -->
-        <g class="routes__xrd" transform="translate(800, 20)">
-          <text x="0" y="0" font-family="Space Grotesk, sans-serif" font-size="8" fill="#8899AA">XRD</text>
-          <path d="M0 70 Q15 68 20 50 Q22 42 25 50 Q30 60 35 55 Q38 45 40 55 Q45 58 50 40 Q52 30 54 40 Q58 55 65 50 Q70 65 80 68 L80 70Z" stroke="#6BA3BE" stroke-width="1" fill="rgba(107,163,190,0.1)"/>
-        </g>
+          <!-- Fork: upward to HAP -->
+          <path class="draw-path route-1" d="M290 180 C310 180, 320 110, 350 85" stroke="#6BA3BE" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Fork: downward to CPP -->
+          <path class="draw-path route-2" d="M290 180 C310 180, 320 250, 350 275" stroke="#6BA3BE" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
 
-        <!-- ====== Route 2: CO3 (middle) ====== -->
-        <line class="draw-path route-2" x1="136" y1="210" x2="550" y2="210" stroke="#A8D4E6" stroke-width="2"/>
-        <g class="routes__labels lbl-2">
-          <rect x="300" y="195" width="96" height="24" rx="12" fill="#A8D4E6" opacity="0.15"/>
-          <text x="348" y="211" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="12" fill="#6BA3BE">+ CO&#8323;&#178;&#8315;</text>
-          <text x="348" y="188" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">Na&#8322;CO&#8323; 0.4 – 1.93 M</text>
-        </g>
-        <circle class="routes__endpoint ep-3" cx="580" cy="210" r="8" fill="#A8D4E6"/>
-        <image href="caco3.svg" x="550" y="172" width="36" height="36" opacity="0.85"/>
-        <g class="routes__labels lbl-2">
-          <text x="598" y="207" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="13" fill="#1B2A4A">CaCO&#8323;</text>
-          <text x="598" y="223" font-family="Noto Sans SC, sans-serif" font-size="10" fill="#8899AA">方解石 / 碳酸钙系列</text>
-          <text x="598" y="238" font-family="Space Grotesk, sans-serif" font-size="9" fill="#A8D4E6">calcite &middot; galyusite &middot; bradleyite</text>
-        </g>
+          <!-- HAP endpoint card -->
+          <rect class="routes__endpoint ep-1" x="350" y="18" width="190" height="130" rx="18" fill="rgba(107,163,190,0.06)" stroke="#6BA3BE" stroke-width="1.5"/>
+          <!-- HAP crystal image -->
+          <image href="HAP.svg" x="362" y="32" width="50" height="50" opacity="0.9"/>
+          <g class="routes__labels lbl-2">
+            <text x="422" y="56" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="18" fill="#1B2A4A">HAP</text>
+            <text x="422" y="76" font-family="Noto Sans SC, sans-serif" font-size="12" fill="#8899AA">羟基磷灰石</text>
+            <rect x="422" y="86" width="52" height="20" rx="10" fill="#6BA3BE" opacity="0.12"/>
+            <text x="448" y="100" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" fill="#6BA3BE">60 &#8451;</text>
+            <text x="362" y="138" font-family="Noto Sans SC, sans-serif" font-size="10" fill="#A8D4E6">Ca&#8321;&#8320;(PO&#8324;)&#8326;(OH)&#8322;</text>
+          </g>
 
-        <!-- XRD CO3 -->
-        <g class="routes__xrd" transform="translate(800, 175)">
-          <text x="0" y="0" font-family="Space Grotesk, sans-serif" font-size="8" fill="#8899AA">XRD</text>
-          <path d="M0 50 Q10 48 18 35 Q20 28 22 35 Q28 42 35 25 Q37 18 39 25 Q44 40 55 35 Q60 42 70 45 Q75 48 80 48 L80 50Z" stroke="#A8D4E6" stroke-width="1" fill="rgba(168,212,230,0.1)"/>
-        </g>
+          <!-- CPP endpoint card -->
+          <rect class="routes__endpoint ep-2" x="350" y="212" width="190" height="130" rx="18" fill="rgba(107,163,190,0.04)" stroke="#6BA3BE" stroke-width="1" stroke-dasharray="5 4"/>
+          <!-- CPP crystal image -->
+          <image href="cpp.svg" x="362" y="226" width="50" height="50" opacity="0.85"/>
+          <g class="routes__labels lbl-3">
+            <text x="422" y="250" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="18" fill="#3A4A5C">CPP</text>
+            <text x="422" y="270" font-family="Noto Sans SC, sans-serif" font-size="12" fill="#8899AA">焦磷酸钙</text>
+            <rect x="422" y="280" width="52" height="20" rx="10" fill="#A8D4E6" opacity="0.15"/>
+            <text x="448" y="294" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" fill="#A8D4E6">冻干</text>
+            <text x="362" y="332" font-family="Noto Sans SC, sans-serif" font-size="10" fill="#A8D4E6">Ca&#8322;P&#8322;O&#8327;&#183;2H&#8322;O</text>
+          </g>
+        </svg>
+      </div>
 
-        <!-- ====== Route 3: HPO4 (bottom) ====== -->
-        <path class="draw-path route-3" d="M136 210 C180 210 200 340 260 340 L550 340" stroke="#C9A96E" stroke-width="2" fill="none"/>
-        <g class="routes__labels lbl-3">
-          <rect x="280" y="348" width="100" height="24" rx="12" fill="#C9A96E" opacity="0.12"/>
-          <text x="330" y="364" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="12" fill="#C9A96E">+ HPO&#8324;&#178;&#8315;</text>
-          <text x="330" y="390" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">K&#8322;HPO&#8324; 0.4 – 13.44 M</text>
-        </g>
-        <circle class="routes__endpoint ep-4" cx="580" cy="340" r="8" fill="#C9A96E"/>
-        <image href="HAP.svg" x="550" y="302" width="36" height="36" opacity="0.85"/>
-        <g class="routes__labels lbl-3">
-          <text x="598" y="337" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="13" fill="#1B2A4A">HAP</text>
-          <text x="598" y="353" font-family="Noto Sans SC, sans-serif" font-size="10" fill="#8899AA">羟基磷灰石</text>
-        </g>
+      <!-- Right: Dual chart cards -->
+      <div class="routes__charts">
+        <!-- Chart 1: 封闭率 -->
+        <div class="routes__chart-card routes__chart-card--blue">
+          <h3 class="routes__chart-title">封闭率 vs Ca<sup>2+</sup> 浓度</h3>
+          <svg class="routes__chart" viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg">
+            <!-- Axes -->
+            <line x1="55" y1="15" x2="55" y2="135" stroke="#C0CDD8" stroke-width="1"/>
+            <line x1="55" y1="135" x2="380" y2="135" stroke="#C0CDD8" stroke-width="1"/>
+            <polygon points="55,13 52,19 58,19" fill="#C0CDD8"/>
+            <polygon points="382,135 376,132 376,138" fill="#C0CDD8"/>
 
-        <!-- XRD HPO4 -->
-        <g class="routes__xrd" transform="translate(800, 310)">
-          <text x="0" y="0" font-family="Space Grotesk, sans-serif" font-size="8" fill="#8899AA">XRD</text>
-          <path d="M0 50 Q12 47 20 30 Q22 22 24 30 Q30 40 38 20 Q40 12 42 20 Q48 35 55 28 Q60 38 70 42 Q75 47 80 48 L80 50Z" stroke="#C9A96E" stroke-width="1" fill="rgba(201,169,110,0.1)"/>
-        </g>
-      </svg>
+            <!-- Y-axis label -->
+            <text x="14" y="75" text-anchor="middle" font-family="Noto Sans SC, sans-serif" font-size="10" fill="#1B2A4A" transform="rotate(-90,14,75)">封闭率 (%)</text>
+
+            <!-- Y gridlines + labels -->
+            <line x1="51" y1="30" x2="55" y2="30" stroke="#C0CDD8" stroke-width="1"/>
+            <text x="46" y="34" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">100</text>
+            <line x1="55" y1="30" x2="340" y2="30" stroke="#6BA3BE" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.4"/>
+
+            <line x1="51" y1="82" x2="55" y2="82" stroke="#C0CDD8" stroke-width="1"/>
+            <text x="46" y="86" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">50</text>
+
+            <line x1="51" y1="135" x2="55" y2="135" stroke="#C0CDD8" stroke-width="1"/>
+            <text x="46" y="139" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">0</text>
+
+            <!-- X-axis labels -->
+            <text x="95" y="150" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">0.5</text>
+            <text x="150" y="150" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">1.0</text>
+            <text x="205" y="150" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">1.5</text>
+            <text x="260" y="150" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">2.0</text>
+            <text x="315" y="150" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">2.5</text>
+            <!-- X ticks -->
+            <line x1="95" y1="135" x2="95" y2="139" stroke="#C0CDD8"/>
+            <line x1="150" y1="135" x2="150" y2="139" stroke="#C0CDD8"/>
+            <line x1="205" y1="135" x2="205" y2="139" stroke="#C0CDD8"/>
+            <line x1="260" y1="135" x2="260" y2="139" stroke="#C0CDD8"/>
+            <line x1="315" y1="135" x2="315" y2="139" stroke="#C0CDD8"/>
+
+            <!-- X-axis title -->
+            <text x="200" y="165" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="10" fill="#1B2A4A">Ca&#178;&#8314; 浓度 (&mu;M)</text>
+
+            <!-- Filled area under curve -->
+            <path d="M95 109 Q120 85 150 77 Q175 64 205 59 Q230 53 249 51 Q265 54 280 62 Q300 82 315 104 L315 135 L95 135 Z" fill="rgba(107,163,190,0.08)"/>
+
+            <!-- Curve -->
+            <path class="draw-path route-1" d="M95 109 Q120 85 150 77 Q175 64 205 59 Q230 53 249 51 Q265 54 280 62 Q300 82 315 104" stroke="#6BA3BE" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+            <!-- Data points -->
+            <circle cx="95" cy="109" r="3.5" fill="#fff" stroke="#6BA3BE" stroke-width="1.5"/>
+            <circle cx="150" cy="77" r="3.5" fill="#fff" stroke="#6BA3BE" stroke-width="1.5"/>
+            <circle cx="205" cy="59" r="3.5" fill="#fff" stroke="#6BA3BE" stroke-width="1.5"/>
+            <circle cx="260" cy="56" r="3.5" fill="#fff" stroke="#6BA3BE" stroke-width="1.5"/>
+            <circle cx="315" cy="104" r="3.5" fill="#fff" stroke="#6BA3BE" stroke-width="1.5"/>
+
+            <!-- Optimal dashed vertical -->
+            <line x1="249" y1="51" x2="249" y2="135" stroke="#6BA3BE" stroke-width="0.7" stroke-dasharray="3 3" opacity="0.5"/>
+            <!-- Optimal point highlight -->
+            <circle cx="249" cy="51" r="5" fill="#6BA3BE" opacity="0.2"/>
+            <circle cx="249" cy="51" r="4" fill="#6BA3BE" stroke="#fff" stroke-width="1.5"/>
+            <!-- Annotation -->
+            <rect x="226" y="30" width="46" height="16" rx="8" fill="#6BA3BE" opacity="0.15"/>
+            <text x="249" y="42" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="9" fill="#6BA3BE">1.8 &mu;M</text>
+          </svg>
+        </div>
+
+        <!-- Chart 2: 封闭深度 -->
+        <div class="routes__chart-card routes__chart-card--ice">
+          <h3 class="routes__chart-title">封闭深度 vs Ca<sup>2+</sup> 浓度</h3>
+          <svg class="routes__chart" viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg">
+            <!-- Axes -->
+            <line x1="55" y1="15" x2="55" y2="135" stroke="#C0CDD8" stroke-width="1"/>
+            <line x1="55" y1="135" x2="380" y2="135" stroke="#C0CDD8" stroke-width="1"/>
+            <polygon points="55,13 52,19 58,19" fill="#C0CDD8"/>
+            <polygon points="382,135 376,132 376,138" fill="#C0CDD8"/>
+
+            <!-- Y-axis label -->
+            <text x="12" y="75" text-anchor="middle" font-family="Noto Sans SC, sans-serif" font-size="10" fill="#1B2A4A" transform="rotate(-90,12,75)">封闭深度 (&mu;m)</text>
+
+            <!-- Y gridlines + labels -->
+            <line x1="51" y1="30" x2="55" y2="30" stroke="#C0CDD8" stroke-width="1"/>
+            <text x="46" y="34" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">70</text>
+            <line x1="55" y1="30" x2="340" y2="30" stroke="#A8D4E6" stroke-width="0.5" stroke-dasharray="3 4" opacity="0.4"/>
+
+            <line x1="51" y1="82" x2="55" y2="82" stroke="#C0CDD8" stroke-width="1"/>
+            <text x="46" y="86" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">35</text>
+
+            <line x1="51" y1="135" x2="55" y2="135" stroke="#C0CDD8" stroke-width="1"/>
+            <text x="46" y="139" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">0</text>
+
+            <!-- X-axis labels -->
+            <text x="95" y="150" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">0.5</text>
+            <text x="150" y="150" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">1.0</text>
+            <text x="205" y="150" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">1.5</text>
+            <text x="260" y="150" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">2.0</text>
+            <text x="315" y="150" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" fill="#8899AA">2.5</text>
+            <line x1="95" y1="135" x2="95" y2="139" stroke="#C0CDD8"/>
+            <line x1="150" y1="135" x2="150" y2="139" stroke="#C0CDD8"/>
+            <line x1="205" y1="135" x2="205" y2="139" stroke="#C0CDD8"/>
+            <line x1="260" y1="135" x2="260" y2="139" stroke="#C0CDD8"/>
+            <line x1="315" y1="135" x2="315" y2="139" stroke="#C0CDD8"/>
+
+            <text x="200" y="165" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="10" fill="#1B2A4A">Ca&#178;&#8314; 浓度 (&mu;M)</text>
+
+            <!-- Filled area -->
+            <path d="M95 109 Q120 68 150 48 Q175 37 205 32 Q235 29 249 29 Q265 33 280 46 Q300 72 315 106 L315 135 L95 135 Z" fill="rgba(168,212,230,0.08)"/>
+
+            <!-- Curve -->
+            <path class="draw-path route-2" d="M95 109 Q120 68 150 48 Q175 37 205 32 Q235 29 249 29 Q265 33 280 46 Q300 72 315 106" stroke="#A8D4E6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+            <!-- Data points -->
+            <circle cx="95" cy="109" r="3.5" fill="#fff" stroke="#A8D4E6" stroke-width="1.5"/>
+            <circle cx="150" cy="48" r="3.5" fill="#fff" stroke="#A8D4E6" stroke-width="1.5"/>
+            <circle cx="205" cy="32" r="3.5" fill="#fff" stroke="#A8D4E6" stroke-width="1.5"/>
+            <circle cx="260" cy="38" r="3.5" fill="#fff" stroke="#A8D4E6" stroke-width="1.5"/>
+            <circle cx="315" cy="106" r="3.5" fill="#fff" stroke="#A8D4E6" stroke-width="1.5"/>
+
+            <!-- Optimal dashed vertical -->
+            <line x1="249" y1="29" x2="249" y2="135" stroke="#A8D4E6" stroke-width="0.7" stroke-dasharray="3 3" opacity="0.5"/>
+            <circle cx="249" cy="29" r="5" fill="#A8D4E6" opacity="0.2"/>
+            <circle cx="249" cy="29" r="4" fill="#A8D4E6" stroke="#fff" stroke-width="1.5"/>
+            <rect x="226" y="9" width="46" height="16" rx="8" fill="#A8D4E6" opacity="0.15"/>
+            <text x="249" y="21" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="9" fill="#6BA3BE">1.8 &mu;M</text>
+          </svg>
+        </div>
+      </div>
     </div>
 
     <p class="routes__footnote reveal reveal-delay-3">
-      除盐种类与浓度外，<strong>时间、pH、添加剂（胶原/酪蛋白/Sr<sup>2+</sup> 等）</strong>均可进一步调控产物相与结晶度。同一凝胶前驱体，通过环境参数组合，实现"相图式"的矿物选择。
+      Ca<sup>2+</sup> 浓度在 <strong>1.8 &mu;M</strong> 时封闭率与封闭深度均达到最优。超过此浓度，过快结晶导致表面堆积而非深层渗透，封闭效果反而下降。
     </p>
   </div>
 </section>
@@ -280,7 +377,7 @@
     <!-- Progress line at top -->
     <div class="corridor__progress">
       <div class="corridor__progress-bar" id="corridorBar"></div>
-      <span class="corridor__counter" id="corridorCounter">1 / 5</span>
+      <span class="corridor__counter" id="corridorCounter">1 / 6</span>
     </div>
 
     <div class="corridor__track" id="corridorTrack">
@@ -345,11 +442,28 @@
         </div>
       </div>
 
-      <!-- Slide 5 -->
+      <!-- Slide 5: 小管封闭 -->
       <div class="corridor__slide">
         <div class="corridor__content">
           <div class="corridor__text">
             <span class="tag">证据 05</span>
+            <h2 class="heading-lg" style="margin-top:var(--sp-2)">牙本质小管封闭</h2>
+            <hr class="divider">
+            <p class="body-text">SEM 图像清晰展示 Ca²⁺ 处理后牙本质小管的封闭效果。从处理前的开放管口到处理后的完全封闭，矿化沉积物均匀覆盖小管表面并深入管腔，形成致密封闭层，有效阻断外部刺激传导通路。</p>
+          </div>
+          <div class="corridor__img corridor__img--triple" data-lightbox>
+            <img src="小管封闭1.jpg" alt="牙本质小管封闭 SEM — 处理前" loading="lazy">
+            <img src="小管封闭2.png" alt="牙本质小管封闭 SEM — 处理后" loading="lazy">
+            <img src="小管封闭3.png" alt="牙本质小管封闭 SEM — 高倍放大" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="corridor__slide">
+        <div class="corridor__content">
+          <div class="corridor__text">
+            <span class="tag">证据 06</span>
             <h2 class="heading-lg" style="margin-top:var(--sp-2)">耐受性验证</h2>
             <hr class="divider">
             <p class="body-text">凝胶 + Ca<sup>2+</sup> 溶液处理仅 1 小时后，经超声清洗 3 分钟 + 模拟刷牙 10 次，矿化层仍稳定保留。修复不仅"长得出来"，还"经得起日常扰动"。细胞实验（CCK-8、H&E、ALP、ARS）证实材料具备良好的生物相容性。</p>
@@ -383,27 +497,27 @@
       <div class="val-grid__item">
         <span class="val-grid__num">02</span>
         <h3 class="val-grid__title">敏感模型</h3>
-        <p class="val-grid__method">EDTA &middot; H&#8323;PO&#8324;</p>
+        <p class="val-grid__method">EDTA/H&#8323;PO&#8324; 酸蚀</p>
       </div>
       <div class="val-grid__item">
         <span class="val-grid__num">03</span>
         <h3 class="val-grid__title">通透性</h3>
-        <p class="val-grid__method">液体流动测量</p>
+        <p class="val-grid__method">液体流动测量 &middot; 气密性测试</p>
       </div>
       <div class="val-grid__item">
         <span class="val-grid__num">04</span>
         <h3 class="val-grid__title">封闭深度</h3>
-        <p class="val-grid__method">150–250 &mu;m</p>
+        <p class="val-grid__method">65–70 &mu;m</p>
       </div>
       <div class="val-grid__item">
         <span class="val-grid__num">05</span>
-        <h3 class="val-grid__title">耐磨耐酸</h3>
-        <p class="val-grid__method">SEM 矩阵</p>
+        <h3 class="val-grid__title">机械性能</h3>
+        <p class="val-grid__method">纳米压痕 &middot; 往复式刮磨试验</p>
       </div>
       <div class="val-grid__item">
         <span class="val-grid__num">06</span>
-        <h3 class="val-grid__title">力学性能</h3>
-        <p class="val-grid__method">纳米压痕</p>
+        <h3 class="val-grid__title">促成骨</h3>
+        <p class="val-grid__method">成骨诱导实验</p>
       </div>
       <div class="val-grid__item">
         <span class="val-grid__num">07</span>
@@ -413,7 +527,7 @@
       <div class="val-grid__item">
         <span class="val-grid__num">08</span>
         <h3 class="val-grid__title">动物模型</h3>
-        <p class="val-grid__method">大鼠 &middot; 体内</p>
+        <p class="val-grid__method">兔子 &middot; 体内</p>
       </div>
       <div class="val-grid__item val-grid__item--final">
         <span class="val-grid__num">09</span>
@@ -426,8 +540,8 @@
       安全 <span class="arrow">&rarr;</span>
       模型 <span class="arrow">&rarr;</span>
       封闭 <span class="arrow">&rarr;</span>
-      耐受 <span class="arrow">&rarr;</span>
-      力学 <span class="arrow">&rarr;</span>
+      机械 <span class="arrow">&rarr;</span>
+      成骨 <span class="arrow">&rarr;</span>
       长期 <span class="arrow">&rarr;</span>
       临床
     </p>

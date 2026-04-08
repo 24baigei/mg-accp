@@ -11,7 +11,7 @@
 
   var current = 0;
   var locked = false;
-  var ANIM_MS = 800;
+  var ANIM_MS = 600;
   var touchStartY = 0;
   var touchStartX = 0;
 

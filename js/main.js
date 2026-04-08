@@ -91,16 +91,20 @@
   var lightboxImg = lightbox ? lightbox.querySelector('img') : null;
 
   document.querySelectorAll('[data-lightbox]').forEach(function (container) {
-    var img = container.querySelector('img');
-    if (!img) return;
+    var imgs = container.querySelectorAll('img');
+    if (!imgs.length) return;
     container.style.cursor = 'zoom-in';
-    container.addEventListener('click', function () {
-      if (!lightbox || !lightboxImg) return;
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      lightboxImg.removeAttribute('aria-hidden');
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
+    imgs.forEach(function (img) {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (!lightbox || !lightboxImg) return;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxImg.removeAttribute('aria-hidden');
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
     });
   });
 
